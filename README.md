@@ -1,82 +1,142 @@
-# Customer Churn Prediction App
+# 🏦 Customer Churn Prediction
 
-This project is a Streamlit web application that predicts whether a customer is likely to churn based on banking and customer behavior data. It uses a trained TensorFlow/Keras neural network together with preprocessing artifacts such as a label encoder, one-hot encoder, and feature scaler.
+A Streamlit web application that predicts whether a bank customer is likely to leave (churn) based on customer and account information. The model is built using TensorFlow/Keras and deployed with Streamlit.
 
-## Project Overview
+## 🚀 Live Demo
 
-The goal of this project is to build and deploy a churn prediction model for a bank/customer dataset. The app takes user-entered customer details and returns a churn probability, helping to identify customers who may leave the service.
+https://customer-segmentation-sql-analysis-6q3may9mxwoqmchgctam7x.streamlit.app/
 
-### Example input features
-- Geography
-- Gender
-- Age
-- Balance
-- Credit score
-- Estimated salary
-- Tenure
-- Number of products
-- Credit card status
-- Active membership status
+---
 
-## Data Science Highlights
+## 📌 Project Overview
 
-- Problem type: Binary classification
-- Target variable: Customer churn (likely to leave or not)
-- Model type: Neural network built with TensorFlow/Keras
-- Preprocessing: Encoding of categorical features, scaling of numerical features
-- Evaluation strategy: Training and validation metrics were monitored during model fitting
+Customer churn prediction helps banks identify customers who are likely to leave so they can take actions to retain them.
 
-## Model Performance
+This application allows users to enter customer details and instantly predicts:
 
-From the training logs in the project notebook, the model reached approximately:
-- Training accuracy: 87.1%
-- Validation accuracy: 86.0%
-- Training loss: 0.3191
-- Validation loss: 0.3529
+- Churn Probability
+- Customer Status (Likely to Stay or Leave)
 
-These results indicate that the model generalizes reasonably well for a churn classification task.
+---
 
-## Features
+## ✨ Features
 
-- Interactive web interface built with Streamlit
-- Real-time churn probability prediction
-- User-friendly input form for customer attributes
-- Pretrained model and preprocessing pipeline included
+- User-friendly Streamlit interface
+- Real-time churn prediction
+- TensorFlow/Keras ANN model
+- Data preprocessing using Label Encoding, One-Hot Encoding, and Standard Scaling
+- Displays churn probability with prediction result
 
-## Project Files
+---
 
-- app.py: Streamlit application entry point
-- model.h5: Trained Keras model
-- label_encoder_gender.pkl: Gender label encoder
-- onehot_encoder_geo.pkl: Geography one-hot encoder
-- scaler.pkl: Feature scaler
-- Churn_Modelling.csv: Dataset used for model development
-- requirements.txt: Python dependencies
+## 📊 Model Performance
 
-## Requirements
+| Metric | Value |
+|---------|-------|
+| Accuracy | **86.70%** |
+| Loss | **0.3355** |
+| Precision (Churn) | **74%** |
+| Recall (Churn) | **50%** |
+| F1-Score (Churn) | **59%** |
 
-Install the required packages using:
+### Classification Report
+
+| Class | Precision | Recall | F1-Score |
+|-------|-----------|--------|----------|
+| Stay (0) | 0.89 | 0.96 | 0.92 |
+| Churn (1) | 0.74 | 0.50 | 0.59 |
+
+---
+
+## 🧠 Technologies Used
+
+- Python
+- TensorFlow / Keras
+- Streamlit
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+
+---
+
+## 📂 Project Structure
+
+```
+Customer-Churn-Prediction/
+│── app.py
+│── model.h5
+│── scaler.pkl
+│── label_encoder_gender.pkl
+│── onehot_encoder_geo.pkl
+│── Churn_Modelling.csv
+│── requirements.txt
+│── runtime.txt
+│── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Mohit01112/Customer-Churn-Prediction.git
+```
+
+Go to the project folder
+
+```bash
+cd Customer-Churn-Prediction
+```
+
+Install the required packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the App
-
-Start the Streamlit app with:
+Run the application
 
 ```bash
 streamlit run app.py
 ```
 
-Then open the local URL shown in the terminal in your browser.
+---
 
-## Notes
+## 📥 Input Features
 
-- The app expects the model and preprocessing files to be present in the project directory.
-- The prediction threshold is set to 0.5.
-- For a stronger production-ready analysis, additional metrics such as precision, recall, F1-score, and confusion matrix can be added.
+- Geography
+- Gender
+- Age
+- Credit Score
+- Balance
+- Estimated Salary
+- Tenure
+- Number of Products
+- Credit Card Status
+- Active Member Status
 
-## Example
+---
 
-Once the app is running, enter customer details and use the interface to view the churn probability and prediction outcome.
+## 📈 Output
+
+The application predicts:
+
+- Churn Probability
+- Low Risk (Customer Likely to Stay)
+- High Risk (Customer Likely to Churn)
+
+---
+
+## 👨‍💻 Author
+
+**Mohit Jadhav**
+
+- GitHub: https://github.com/Mohit01112
+- LinkedIn: https://www.linkedin.com/in/mohit-jadhav-49734427b/
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
