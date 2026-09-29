@@ -134,7 +134,6 @@ The application predicts:
 
 **Mohit Jadhav**
 
-- GitHub: https://github.com/Mohit01112
 - LinkedIn: https://www.linkedin.com/in/mohit-jadhav-49734427b/
 
 ---
